@@ -58,7 +58,7 @@ public class ResourceInput : MonoBehaviour {
     }
 
     void AddItem(string name, int side, GameObject go, Resorces r) {
-        if (input_sides[Mathf.Abs(side+rg.dir)%4]) {
+        if (input_sides[Mathf.Abs(side-rg.dir)%4]) {
             if (StoredResources.ContainsKey(name)) {
                 StoredResources[name]+=r.count;
             }
